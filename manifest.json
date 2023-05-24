@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "HN Back",
+    "version": "1.0",
+    "description": "Add HN comments to back history to encourage reading article before comments",
+    "content_scripts": [
+        {
+            "matches": ["*://news.ycombinator.com/*"],
+            "js": ["hn.js"]
+        }
+    ]
+}
