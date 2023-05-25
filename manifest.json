@@ -3,10 +3,25 @@
     "name": "HN Back",
     "version": "1.0",
     "description": "Add HN comments to back history to encourage reading article before comments",
+    "options_ui": {
+      "page": "options.html",
+      "browser_style": true
+    },
+    "permissions": ["storage"],
     "content_scripts": [
         {
             "matches": ["*://news.ycombinator.com/*"],
-            "js": ["hn.js"]
+            "js": ["base.js", "hn.js"]
+        },
+        {
+            "matches": ["*://lobste.rs/*"],
+            "js": ["base.js", "lobsters.js"]
         }
-    ]
+    ],
+    "browser_specific_settings": {
+      "gecko": {
+          "id": "hn-back@dimtion.fr",
+          "strict_min_version": "57.0a1"
+      }
+  }
 }
