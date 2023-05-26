@@ -1,7 +1,11 @@
 // TODO: avoid blinking comments
 // TODO: Hide comments while loading
 
-const STORAGE_KEY = "__BACK_NEXT";
+const STORAGE_KEY = "__ZEN_NEXT";
+
+if (typeof browser === "undefined") {
+    browser = chrome;
+}
 
 const hideElements = (primitives) => {
   let storageItem = browser.storage.sync.get();

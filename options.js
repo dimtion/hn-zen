@@ -1,3 +1,7 @@
+if (typeof browser === "undefined") {
+    browser = chrome;
+}
+
 const saveOptions = (e) => {
   browser.storage.sync.set({
     hideComments: document.querySelector("#hide-comments").checked,

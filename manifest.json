@@ -1,13 +1,20 @@
 {
-    "manifest_version": 2,
-    "name": "HN Back",
-    "version": "1.0",
-    "description": "Add HN comments to back history to encourage reading article before comments",
+    "manifest_version": 3,
+    "name": "hn-zen",
+    "version": "0.1",
+    "description": "Add HN & Lobsters comments to browser history when clicking on link, to encourage reading articles first",
+    "icons": {
+        "128": "img/logo.png"
+    },
     "options_ui": {
       "page": "options.html",
-      "browser_style": true
+      "open_in_tab": false
     },
     "permissions": ["storage"],
+    "host_permissions": [
+        "*://news.ycombinator.com/*",
+        "*://lobste.rs/*"
+    ],
     "content_scripts": [
         {
             "matches": ["*://news.ycombinator.com/*"],
@@ -20,8 +27,8 @@
     ],
     "browser_specific_settings": {
       "gecko": {
-          "id": "hn-back@dimtion.fr",
+          "id": "hn-zen@dimtion.fr",
           "strict_min_version": "57.0a1"
       }
-  }
+    }
 }
