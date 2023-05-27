@@ -12,3 +12,9 @@ This change in behavior encourage the following experience:
 3. Read the comments
 
 Which provides a much more zen experience of reading.
+
+## Installation
+
+* Firefox: https://addons.mozilla.org/en-US/firefox/addon/hn-zen/https://addons.mozilla.org/en-US/firefox/addon/hn-zen/
+* Chrome: soon
+
